@@ -25,6 +25,6 @@ public:
 	void updDirection(int newdir);
 	void move();
 	void grow();
-	bool collapsed(Collision &other);
+	bool eat(Collision &other);
 	void renderSnake(RenderWindow& screen);
 };

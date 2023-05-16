@@ -132,7 +132,7 @@ void process()
 		if (timelapse % speedlv == 0)
 		{
 			snake.move();
-			if (snake.collapsed(currentFood))
+			if (snake.eat(currentFood))
 			{
 				//SDL_Log("eaten");
 				currentFood = Food();
@@ -143,7 +143,7 @@ void process()
 			}
 
 			for (int i = 1; i < (int)snake.body.size(); ++i)
-				if (snake.collapsed(*snake.body[i]))
+				if (snake.eat(*snake.body[i]))
 				{
 					isOver = true;
 				}

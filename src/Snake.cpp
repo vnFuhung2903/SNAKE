@@ -27,9 +27,9 @@ void Snake::move()
 	body[0]->move(dir);
 }
 
-bool Snake::collapsed(Collision& other)
+bool Snake::eat(Collision& other)
 {
-	return body[0]->collapsed(other);
+	return body[0]->eat(other);
 }
 
 void Snake::grow()
